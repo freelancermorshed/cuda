@@ -1,0 +1,591 @@
+/*============================================================================================
+  NAME: AN AWESOME PORTFOLIO TEMPLATE
+  AURTOR: FARHAN RAHI
+  AURTHOR URI:
+  CONTACT: codermoon3090@gmail.com
+=============================================*/
+ /*===========================================================================================
+    font-family
+ ====================*/
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
+
+/*===========================================================================================
+  DEFAULT FONT-SIZE
+===================================================*/
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/*============================================================================================
+  BASIC SETUP
+=============================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: 'Titillium Web', sans-serif;
+    text-rendering: optimizeLegibility;
+    line-height: 1.3;
+    font-size: 1.6rem;
+}
+ul li {
+  list-style-type: none;
+}
+
+/*============================================================================================      heading
+=============================================================*/
+
+h1 {
+  font-size: 4.2rem;
+  color: #fff;
+  display: inline-block;
+}
+
+
+/*============================================================================================   BUTTON
+=============================================================*/
+
+.btn:link,
+.btn:visited,
+.btn {
+    background: #000;
+    color: #fff;
+    border-bottom: 0.1rem solid #000;
+    text-decoration: none;
+    padding: 1.5rem 6rem;
+    border-radius: 0.3rem;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-top: 4.5rem;
+    font-size: 1.6rem;
+    position: relative;
+
+}
+
+
+ /*=============================================================
+    REUSEABLE COMPONENT
+
+ ========================*/
+.row {
+      max-width: 114rem;
+      margin: 0 AUTO;
+}
+
+section  {
+  padding: 8rem 0;
+}
+h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  text-align: center;
+}
+h2::after {
+   content: "";
+   display: block;
+   height: .4rem;
+   width: 8.5rem;
+   background: rgba(50, 140, 120, 1);
+   margin: auto;
+   margin-top: 2rem;
+}
+h3 {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+}
+h4 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 2.5rem;
+}
+.box {
+
+}
+.box p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-top: 2.5rem;
+  color: #fff;
+}
+/*==paragraph--*/
+.little-description {
+  font-size: 1.8rem;
+  width: 60%;
+  margin-left: 20%;
+  line-height: 3rem;
+
+}
+
+
+/*=============================================================
+   HEADER SECTION
+
+========================*/
+  header {
+    background: linear-gradient(rgba(135, 80, 156, 0.9), rgba(135, 80, 156, 0.9)), url(img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 85vh;
+   }
+  .logo {
+    height: 3.5rem;
+    width: auto;
+    margin-top: 3.5rem;
+    margin-left: 1.5rem;
+    float: left;
+
+  }
+
+  /*=========================================================================================
+     NAVIGATION SECTION
+
+  ==============================================================================*/
+    .main-nav {
+      float: right;
+      margin-top: 4rem;
+      margin-right: 1.5rem;
+    }
+    .main-nav li {
+      display: inline-block;
+      margin-left: 1rem;
+    }
+      .main-nav li a:link,
+      .main-nav li a:visited {
+          text-decoration: none;
+          color: #fff;
+          text-transform: uppercase;
+          background: rgba(100, 58, 121, 0);
+          padding: 0.6rem 1.6rem;
+          border-radius: 0.3rem;
+          display: inline-block;
+          font-size: 1.6rem;
+          transition: .3s;
+
+}
+
+    .main-nav li:nth-child(1) {
+      margin-left: 0;
+    }
+    .main-nav li:hover a:link,
+    .main-nav li:hover a:visited {
+        background:  rgba(100, 58, 121, 1);
+    }
+      .main-nav li.active a {
+        background:  rgba(100, 58, 121, 1);
+
+    }
+    .mobile-menu span {
+      color: #fff;
+      font-size: 4rem;
+      float: right;
+      display: none;
+      margin-top: .5rem;
+    }
+
+    .mobile-menu span:hover {
+      cursor: pointer;
+    }
+
+    /*========================================================================================
+           HAMBURGER MENU
+    =====================================================================================*/
+    .overlay {
+      width: 0;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 1;
+      overflow-x: hidden;
+      transition: .5s;
+    }
+    .overlay-content {
+      position: relative;
+      top: 15%;
+      width: 100%;
+      text-align: center;
+
+    }
+      .overlay-content a {
+        text-decoration: none;
+        display: block;
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: .3rem;
+        margin: 2rem 0;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .overlay-content a:hover {
+        color: #fff;
+      }
+      .closebtn {
+      position: absolute;
+      top: 2rem;
+      right: 4.5rem;
+      font-size: 6rem;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.6);
+      }
+
+
+
+    /*========================================================================================
+           STICKY NAVIGATION
+    =====================================================================================*/
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(135, 80, 156, 0.9);
+        padding: 1rem 0;
+        box-shadow: 0 .2rem .5rem rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+  }
+    .sticky .logo {
+        margin-top: 0;
+    }
+    .sticky .main-nav {
+        margin-top: 0;
+    }
+    .hero-text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 90%;
+
+    }
+    .btn-hero:link,
+    .btn-hero:visited {
+        background: #eb7d4b;
+        border-color: #c86a40;
+    }
+
+    /*========================================================================================
+       SERVICES SECTION
+
+    ==============================================================================*/
+    .services-section {
+        color: #fff;
+        text-align: center;
+        background: linear-gradient(rgba(23, 194, 164, .8), rgba(23, 194, 164, .9)), url(img/service.jpg);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+    }
+    .services-icons {
+        height: 13rem;
+        margin-top: 4.5rem;
+        margin-bottom: 3.5rem;
+    }
+
+    /*========================================================================================
+       TEAM SECTION
+
+    ==============================================================================*/
+
+  .team-section {
+      background: linear-gradient(rgba(231, 241, 248, .9), rgba(231, 241, 248, .9)), url(img/team.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      text-align: center;
+  }
+  .team-section h2 {
+      color: #3c4761;
+  }
+  .team-section h2::after {
+      background: rgba(200, 200, 229, 1);
+  }
+  .team-member {
+      margin-top: 4.5rem;
+      margin-bottom: 3.5rem;
+      width: 20rem;
+      height: 20rem;
+      border-radius: 50%;
+
+
+  }
+  .team-section h3 {
+      color: #27283d;
+  }
+  .position {
+      font-size: 1.6rem;
+      color: #30bae7;
+      text-transform: capitalize;
+      margin-top: .5rem;
+      display: inline-block;
+  }
+  .team-section .box p {
+      color: #5d677b;
+
+  }
+  .social-icons {
+      margin-top: 4.5rem;
+  }
+  .social-icons ul li {
+      display: inline-block;
+      margin: 0 .5rem;
+  }
+  .social-icons ul li a {
+      color: #fff;
+}
+  .social-icons ul li a:link i::before {
+      background: #bdd1df;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      font-size: 2rem;
+      padding: 1rem;
+      display: inline-block;
+      text-align: center;
+      transition: .5s;
+    }
+  .social-icons ul li a:hover i::before {
+      background: #e74c3c;
+      transform: rotate(360deg);
+  }
+
+
+
+  /*========================================================================================
+     SKILL SECTION
+
+  ==============================================================================*/
+    .skill-section {
+        background: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .9)), url(img/skill.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+    }
+    .skill-section h2,
+    .skill-section h3 {
+        color: #3c4761;
+    }
+    .skill-section h2::after {
+        background: #dfe8ed;
+    }
+    .skill-section .box {
+        margin-top: 4.5rem;
+    }
+    svg.radial-progress circle {
+        stroke-width: 5;
+    }
+    svg.radial-progress text {
+          fill: #3c4761;
+          font-size: 1.5rem;
+    }
+    svg.web-design circle {
+          stroke: #30bae7;
+    }
+    svg.html-css circle {
+          stroke: #d74680;
+    }
+    svg.graphic-design circle {
+          stroke: #15c7a8;
+    }
+    svg.ui-ux circle {
+          stroke: #eb7d4b;
+    }
+
+    /*========================================================================================
+       PORTFOLIO SECTION
+
+    ==============================================================================*/
+    .portfolio-section {
+      background: linear-gradient(rgba(255, 221, 153, .85), rgba(255, 221, 153, .85)), url(img/portfolio.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      text-align: center;
+    }
+    .portfolio-section h2 {
+      color: #393939;
+    }
+    .portfolio-section h2::after {
+      background: #e5c37f;
+    }
+    .portfolio-filter {
+        margin: 4.5rem 0;
+    }
+    .portfolio-filter button {
+        font-size: 1.8rem;
+        padding: 1rem 2rem;
+        background: #e5c37f;
+        color: #393939;
+        border-radius: .5rem;
+        border: 0;
+        text-transform: uppercase;
+        margin: 0.5rem;
+        transition: .5s;
+    }
+    .portfolio-filter button:hover {
+        cursor: pointer;
+        box-shadow: inset 0 .3rem .5rem rgba(60, 71, 97, .5);
+    }
+    .portfolio-img {
+        width: 90%;
+        height: auto;
+    }
+    .portfolio-section .col:nth-child(3) {
+        margin-left: 0;
+    }
+    .portfolio-section h4 {
+        color: #393939;
+    }
+    .portfolio-section .btn-project {
+        background: #17c2a4;
+        border-color: #14a58c;
+    }
+    .portfolio-section .mixitup-control-active {
+        background: #fff;
+    }
+    /*========================================================================================
+      TESTIMONIAL SECTION
+
+    ==============================================================================*/
+
+    .testimonial-section {
+        background: linear-gradient(rgba(215, 70, 128, .95), rgba(215, 70, 128, .95)), url(img/testi.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .testimonial-section h2::after {
+        background: rgba(190, 50, 120, 1);
+    }
+    .testimonial-section .little-description {
+        color: #fff;
+        text-align: center;
+        margin-bottom: 6rem;
+    }
+    .testimonial-section .client-photo img {
+      width: 8rem;
+      border-radius: 50%;
+    }
+    .client-review p {
+        font-size: 2.1rem;
+        margin-top: 0;
+        margin-bottom: 2rem;
+
+    }
+    .client-review span {
+        font-size: 1.8rem;
+        color: #ffdd99;
+    }
+    .testimonial-section .box:nth-child(3) {
+        margin-left: 0;
+    }
+    .testimonial-section .box:nth-child(3),
+    .testimonial-section .box:nth-child(4) {
+        margin-top: 8rem;
+    }
+    .client-photo {
+        width: 10rem;
+        float: left;
+    }
+    .client-review {
+        width: 35rem;
+        float: left;
+
+    }
+
+    /*========================================================================================
+       CONTACT SECTION
+
+    ==============================================================================*/
+    .contact-section {
+        background: linear-gradient(rgba(60, 84, 153, .95), rgba(60, 84, 153, .95)), url(img/contact.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        text-align: center;
+    }
+    .contact-section h2::after {
+        background: #273a71;
+    }
+    .contact-section p {
+        color: #fff;
+    }
+    .contact-section form {
+        margin-top: 5rem;
+        width: 70%;
+        margin-left: 15%;
+}
+    .contact-section input[type="text"],
+    .contact-section input[type="email"],
+    .contact-section textarea {
+        background: #273a71;
+        border: 1px solid #273a71;
+        width: 100%;
+        padding: 1.5rem;
+        border-radius: .5rem;
+        font-size: 1.8rem;
+        text-transform: capitalize;
+        margin: .5rem 0;
+    }
+    .contact-section form ::-moz-placeholder {
+        color: #fff;
+        opacity: .7;
+    }
+    .contact-section form ::placeholder {
+        color: #fff;
+        opacity: .7;
+    }
+    .contact-section textarea {
+        height: 20rem;
+    }
+    .btn-submit {
+        border: 0;
+        border-bottom: .3rem solid #299ec5;
+        background: #30bae7;
+
+    }
+    .btn-submit:hover {
+        cursor: pointer;
+    }
+
+    /*========================================================================================
+       FOOTER SECTION
+
+    ==============================================================================*/
+
+    .footer-section {
+        background: #344b8e;
+        padding: 3rem 0;
+        text-align: center;
+        border-top: .1rem solid rgba(255, 255, 255, .4);
+    }
+    .footer-section ul li {
+        display: inline-block;
+        margin: 0 2rem;
+
+    }
+    .footer-section ul li a {
+        text-decoration: none;
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 2.4rem;
+    }
+    .footer-section ul li a:hover {
+        color: #d74680;
+    }
